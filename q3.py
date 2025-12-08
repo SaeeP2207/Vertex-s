@@ -1,0 +1,26 @@
+x1=3+7*7
+x2=10-4/2+6
+x3=2+3*4*4
+x4=(5+3)*2*2
+x5=20//3+8%3*2
+
+if(x1==52):
+	print("Correct")
+else:
+	print("Wrong")
+if(x2==14):
+	print("Correct")
+else:
+	print("Wrong")
+if(x3==50):
+	print("Correct")
+else:
+	print("Wrong")
+if(x4==32):
+	print("Correct")
+else:
+	print("Wrong")
+if(x5==10):
+	print("Correct")
+else:
+	print("Wrong")
