@@ -23,11 +23,11 @@ class Seat:
 
 class RegularSeat(Seat):
     def get_price(self):
-        return 150
+        return 200
 
 class PremiumSeat(Seat):
     def get_price(self):
-        return 250
+        return 300
 
 class Show:
     def __init__(self, show_id, movie, time):
@@ -132,10 +132,14 @@ class Theatre:
         self.food_counter = FoodCounter()
         self.current_booking = None
     def setup(self):
-        m1 = Movie(1, "Inception", 148, "Sci-Fi")
-        m2 = Movie(2, "Interstellar", 169, "Sci-Fi")
+        m1 = Movie(1, "Avatar: Fire and Ash", 197 min, "Sci-Fi/Action")
+        m2 = Movie(2, "Interstellar", 169 min, "Sci-Fi")
+        m3 = Movie(3, "Jurassic World Rebirth", 134 min, "Sci-Fi/Action")
+        m4 = Movie(4, "Zootopia 2", 108 min, "Animation/Comedy/Adventure")
         self.shows.append(Show(1, m1, "10:00 AM"))
         self.shows.append(Show(2, m2, "2:00 PM"))
+        self.shows.append(Show(3, m3, "5:00 PM"))
+        self.shows.append(Show(4, m4, "9:00 PM"))
     def start(self):
         while True:
             print("\n--- Movie Theatre Menu ---")
