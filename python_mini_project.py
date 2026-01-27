@@ -72,7 +72,7 @@ class FoodCounter:
 
     def order_snacks(self):
         self.display_menu()
-        choices = input("Enter snack numbers (comma separated): ").split(",")
+        choices = input("Enter quantity: ").split(",")
         selected = []
         for ch in choices:
             idx = int(ch.strip()) - 1
@@ -156,15 +156,15 @@ class Theatre:
                 for show in self.shows:
                     show.display_show()
             elif choice == "2":
-                sid = int(input("Enter Show ID: "))
-                show = next((s for s in self.shows if s.show_id == sid), None)
+                show_id = int(input("Enter Show ID: "))
+                show = next((s for s in self.shows if s.show_id == show_id), None)
                 if show:
                     show.display_seats()
             elif choice == "3":
                 name = input("Enter customer name: ")
                 self.current_booking = Booking(name)
-                sid = int(input("Enter Show ID: "))
-                show = next((s for s in self.shows if s.show_id == sid), None)
+                show_id = int(input("Enter Show ID: "))
+                show = next((s for s in self.shows if s.show_id == show_id), None)
                 if show:
                     show.display_seats()
                     seats = input("Enter seat numbers: ").split(",")
